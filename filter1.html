@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .card{
+            height: 330px;
+            width:200px;
+            margin: 1%;
+        }
+        .card img{
+            height: 330px;
+            width:200px;
+        }
+    </style>
+</head>
+
+<body>
+    <form>
+        <input type="number" id="minvalue"/>
+        <input type="number" id="maxvalue"/>
+        <input type="button" class="submit" value="filter"/>
+    </form>
+
+    <div style="display:inline-flex;flex-wrap: wrap;"                >
+            <div class="card" data-value="3000">
+                <img src="https://assets0.mirraw.com/images/11750953/1693289473048_long_webp.webp?1706784441" />
+                <p>3000</p>
+            </div>
+
+            <div class="card" data-value="4500">
+                <img src="https://cdn.shopify.com/s/files/1/0412/0002/5751/files/WhatsAppImage2023-02-15at12.27.17PM_600x600.webp?v=1689423505" />
+                <p>4500</p>
+            </div>
+    
+            <div class="card" data-value="6000">
+                <img src="https://cdn.shopify.com/s/files/1/0049/3649/9315/files/koskii-ranipink-threadwork-net-designer-readymadelehenga-gcrm0032275_rani_pink_1_1_large.jpg?v=1710761686"/>
+                <p>6000</p>
+            </div>
+       
+        
+            <div class="card" data-value="5000">
+                <img src="https://i.pinimg.com/originals/ac/88/3e/ac883e69b74b9b3ad28ae659cc072066.jpg" />
+                <p>5000</p>
+            </div>
+    
+            <div class="card" data-value="4000">
+                <img src="https://i.pinimg.com/474x/5e/ba/82/5eba8229feb5efe71f0f62b9b81b1f7b.jpg"/>
+                <p>4000</p>
+            </div>
+    
+        
+            <div class="card" data-value="8000">
+                <img src="https://indicbrands.com/wp-content/uploads/2023/02/74728B72-D203-400E-B9B4-F94B63BD10FD.jpeg" />
+                <p>8000</p>
+            </div>
+
+    
+       
+            <div class="card"  data-value="5000">
+                <img src="https://www.textileinfomedia.com/img/epme/buy-silk-bridal-saree-for-women-full.jpg" />
+                <p>5000</p>
+            </div>
+
+
+       
+            <div class="card"  data-value="4000">
+                <img src="https://www.mangaldeep.co.in/image/cache/data/blue-color-embroidered-saree-for-women-34439-800x1100.jpg" />
+                <p>4000</p>
+            </div>
+
+    
+            <div class="card "  data-value="2100">
+                <img src="https://images.meesho.com/images/products/103136364/brnal_512.webp" />
+                <p>2100</p>
+            </div>
+
+
+   
+            <div class="card"data-value="1200">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJki7inGszNgkLPpQiU9qeG3GJ9wXKVMSZjMyQFXu6iNLuF39ozkrDD9_nEFqDtEBKoY8&usqp=CAU"/>
+                <p>1200</p>
+            </div>
+
+        
+   
+            <div class="card" data-value="4000">
+                <img src="https://m.media-amazon.com/images/I/81PwMKzYdiL._AC_UY1100_.jpg" />
+                <p>4000</p>
+            </div>
+    
+            <div class="card"data-value="8000">
+                <img src="https://i.pinimg.com/736x/c2/30/50/c23050b9b934fa12c52d7d6368a89050.jpg" />
+                <p>8000</p>
+            </div>
+
+            
+            </div>
+<script>
+    subBtn=document.querySelector('.submit');
+    let datavalue=document.querySelectorAll('.card');
+    datavalue.forEach(function(Items){
+        subBtn.addEventListener('click',function(){
+            let min=document.getElementById('minvalue').value;
+            let max=document.getElementById('maxvalue').value;
+            minPI=parseInt(min);
+            maxPI=parseInt(max);
+            //alert(min);
+            //alert(max);
+            let dataItems=Items.getAttribute('data-value');
+            //alert(dataItem);
+            if(dataItems>=minPI && dataItems<=maxPI){
+                Items.style.display="block";
+            }
+            else{
+                Items.style.display="none";
+            }
+            
+        })
+    })
+</script>
+</body>
+</html>

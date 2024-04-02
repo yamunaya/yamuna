@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img class="d-block w-100" src="https://assets.aboutamazon.com/dims4/default/b490815/2147483647/strip/true/crop/1280x640+0+40/resize/1200x600!/quality/90/?url=https%3A%2F%2Famazon-blogs-brightspot.s3.amazonaws.com%2F3c%2Fc1%2F4a6199e64b428a869ee60404cf1d%2Fabout-agif-blog-leadbanner-2a.jpg" height="700px" width="100%"  alt="First slide">
+          </div>
+          <div class="carousel-item">
+            <img class="d-block w-100" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQwKT913zNX6z5WxhmwlQQ5RbCtv6UkKcu-Q&usqp=CAU"height="700px" width="100%" alt="Second slide">
+          </div>
+          <div class="carousel-item">
+            <img class="d-block w-100" src="https://images.livemint.com/img/2021/06/21/600x338/Flipkart_back_to_college_discounts_1624279547204_1624279566366.PNG" height="700px" width="100%" alt="Third slide">
+          </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+      <div class="container">
+        <div class="row">
+            <div class="col-sm-4">
+                <div class="card" style="margin-top:50px;" >
+                    <img src="https://i.pinimg.com/736x/2a/53/1e/2a531ef6ad359e7f3e1c1e1cc6cb0970.jpg" height="400px"/>
+                   <center><h1> WOMEN WEAR</h1></center> 
+                   <button onclick="show()"> click </button>
+                </div>
+                <script>
+                  function show(){
+                    location.href="firstpage.html";
+                  }
+                </script>
+    
+            </div>
+            <div class="col-sm-4">
+                <div class="card" style="margin-top:50px;">
+                    <img src="https://d1csarkz8obe9u.cloudfront.net/posterpreviews/men%27s-wear-clothing-sale-discount-social-medi-design-template-ad815d2612fa1c3199969969add3bd56_screen.jpg?ts=1681704020" height="400px"/>
+                   <center><h1> MEN WEAR</h1></center> 
+                   <button onclick="sub()"> click </button>
+                </div>
+                <script>
+                  function sub(){
+                    location.href="men.html";
+                  }
+                </script>
+            </div>
+        
+            <div class="col-sm-4">
+                <div class="card" style="margin-top:50px;">
+                    <img src="https://i.pinimg.com/736x/57/78/b3/5778b3d5df464430c06af9cfd2918163.jpg" height="400px"/>
+                    <center><h1> KID WEAR</h1></center> 
+                    <button onclick="sup()"> click </button>
+                </div>
+                <script>
+                  function sup(){
+                    location.href="kid.html";
+                  }
+                </script>
+            </div>
+      </div>  
+    </div>
+</body>
+</html>

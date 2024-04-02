@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .card{
+        height: 330px;
+        width:200px;
+        margin:1%;
+    }
+    .card img{
+        height: 300px;
+        width: 100%;
+    }
+</style>
+<body>
+    <form>
+        <input type="number" id="minvalue"/>
+        <input type="number" id="maxvalue"/>
+        <input type="button" class="submit" value="filter"/>
+    </form>
+
+    <div style="display:inline-flex;flex-wrap: wrap;" >
+            <div class="card" data-value="1000">
+              
+                <img src="https://www.mumkins.in/cdn/shop/files/frock-for-girls-gs171818-red-model-image.jpg?v=1685606723&width=1080" />
+                <p>1000</p>
+            </div>
+
+        
+        
+            <div class="card" data-value="1500">
+                <img src="https://www.mumkins.in/cdn/shop/files/frock-for-girls-gs171817-onion-model-image.jpg?v=1686048039&width=1080" />
+                <p>1500</p>
+            </div>
+    
+    
+            <div class="card" data-value="2500">
+                <img src="https://www.jiomart.com/images/product/original/rvmlqelnk6/aashrun-kids-frocks-kids-dress-party-wear-party-frocks-fancy-frocks-fancy-frockrocks-rayon-frocks-rayon-frock-blue-frock-knee-length-frock-frock-for-girls-frocks-for-kids-baby-dress-baby-frocks-white-product-images-rvmlqelnk6-0-202309081315.jpg?im=Resize=(500,630) " />
+                <p>2500</p>
+     
+            </div>
+       
+
+        
+            <div class="card" data-value="2000">
+                <img src="https://5.imimg.com/data5/SELLER/Default/2022/9/BG/WR/VC/15408429/girls-kids-wear.jpg"/>
+                <p>2000</p>
+            </div>
+    
+            <div class="card" data-value="2500">
+                <img src="https://i.pinimg.com/736x/4d/7d/86/4d7d86944d8526dae3fbc91bf84fecfd.jpg"/>
+                <p>2500</p>
+            </div>
+    
+        
+            <div class="card" data-value="3000">
+                <img src="https://i.pinimg.com/236x/53/82/22/5382226cb30e0e368dddf4fa4795ac6b.jpg"/>
+                <p>3000</p>
+            </div>
+
+    
+       
+            <div class="card"  data-value="3200">
+                <img src="https://liandli.in/cdn/shop/files/LIEWG106_5_-min_600x.jpg?v=1695109835"/>
+                <p>3200</p>
+            </div>
+
+
+       
+            <div class="card"  data-value="2000">
+                <img src="https://i.pinimg.com/originals/57/b1/be/57b1bec83951c37c98d37885c2fdafee.jpg"/>
+                <p>2000</p>
+            </div>
+
+    
+            <div class="card "  data-value="3000">
+                <img src="https://i.pinimg.com/474x/96/ed/11/96ed11a334bbfa636ee66dd41240e9c5.jpg"/>
+                <p>3000</p>
+            </div>
+
+
+            <div class="card"data-value="1000">
+                <img src="https://images.meesho.com/images/products/136569098/bb0w5_512.webp" />
+                <p>1000</p>
+            </div>
+
+        
+   
+            <div class="card" data-value="1800">
+                <img src="https://images.meesho.com/images/products/199465634/gxlf6_512.webp" />
+                <p>1800</p>
+            </div>
+    
+            <div class="card"data-value="800">
+                <img src="https://rukminim2.flixcart.com/image/850/1000/xif0q/kids-apparel-combo/m/z/e/3-4-years-girls-dress-jeans-top-kids-sshanti-original-imagn283sqnnyvg6.jpeg?q=90&crop=false" />
+                <p>800</p>
+            </div>
+
+            </div>
+<script>
+    subBtn=document.querySelector('.submit');
+    let datavalue=document.querySelectorAll('.card');
+    datavalue.forEach(function(Items){
+        subBtn.addEventListener('click',function(){
+            let min=document.getElementById('minvalue').value;
+            let max=document.getElementById('maxvalue').value;
+            minPI=parseInt(min);
+            maxPI=parseInt(max);
+            //alert(min);
+            //alert(max);
+            let dataItems=Items.getAttribute('data-value');
+            //alert(dataItem);
+            if(dataItems>=minPI && dataItems<=maxPI){
+                Items.style.display="block";
+            }
+            else{
+                Items.style.display="none";
+            }
+            
+        })
+    })
+</script>
+</body>
+</html>
